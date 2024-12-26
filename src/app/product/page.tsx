@@ -1,8 +1,7 @@
-"use client"
-
-
+"use client";
 
 import Link from "next/link";
+import Image from "next/image"; // Import the Image component
 import { useEffect, useState } from "react";
 
 interface Product {
@@ -49,10 +48,13 @@ const ProductHomePage = () => {
           <Link key={product.id} href={`/product/${product.id}`}>
             <div className="bg-white border rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer">
               <div className="relative">
-                <img
+                <Image
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-56 object-cover"
+                  width={500}
+                  height={224} // Aspect ratio for h-56 equivalent
+                  className="object-cover w-full h-56"
+                  priority // Ensures these images load faster
                 />
                 <span className="absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
                   Sale

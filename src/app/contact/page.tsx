@@ -6,7 +6,7 @@ const ContactPage = () => {
       <div className="w-full max-w-md sm:max-w-lg lg:max-w-2xl">
         <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6">Contact Us</h1>
         <p className="text-center text-gray-600 mb-8">
-          Have questions or need support? We're here to help!
+          Have questions or need support? We are here to help!
         </p>
         <form className="space-y-6">
           <div>
